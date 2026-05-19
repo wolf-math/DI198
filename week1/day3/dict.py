@@ -49,3 +49,7 @@ new_dact[("pink", "blue")] # False
 new_dact[5] # "five"
 new_dact[True] # 'this is true'
 
+True in new_dact
+
+
+person["chicken"] = True

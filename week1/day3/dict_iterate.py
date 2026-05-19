@@ -3,8 +3,6 @@ my_books = {
   "author": "JK Rowling",
 }
 
-print(my_books.items())
-
 for x, y in my_books.items():
     print("the" + x + "is" + y)
 
