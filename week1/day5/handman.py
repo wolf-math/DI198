@@ -14,11 +14,13 @@ def check_letter(user_letter, word):
     print(indecies)
     return indecies
 
-def display_word(word, letter, index_list):
+def display_word(word, word_letter, index_list):
     new_word = ""
     for index, letter in enumerate(word):
-        if index in index_list:
+        if letter != "*":
             new_word += letter
+        elif index in index_list:
+            new_word += word_letter
         else:
             new_word += "*"
     return new_word       
@@ -28,7 +30,7 @@ def play():
     num_chances = 6
     word = get_random_word()
 
-    print("*" * len(word))
+    display = '*' * len(word)
 
     while num_chances > 0:
         user = input("Ask for a letter in the word: ")
@@ -38,16 +40,19 @@ def play():
 
         position_list = check_letter(user, word)
 
-        if len(position_list) > 0:
-            word = display_word(word, user, position_list)
-        else:
+        if len(position_list) == 0:
             print("Letter not in word ")
             num_chances -= 1
+        else:
+            display = display_word(display, user, position_list)
+        
+        print(display)
 
-        print(word)
-
-        if "*" not in word:
+        if "*" not in display:
             print("You win")
+            break
+    
+    print(word)
 
 
 play()
