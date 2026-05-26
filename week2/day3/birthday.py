@@ -16,7 +16,7 @@ def birthday_countdown(day, month):
     now = datetime.now()
 
     next_birthday_year = now.year
-    if now.month > month and now.day > day:
+    if (now.month, now.day) > (month, day):
         next_birthday_year += 1
 
     next_birthday_date = datetime.strptime(f"{day}/{month}/{next_birthday_year}", "%d/%m/%Y")
