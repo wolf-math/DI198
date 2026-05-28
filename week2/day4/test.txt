@@ -1,5 +1,0 @@
-/Users/aaron/code/DI198/week2/day4/exercise1/exercise1.py
-
-week2/day4/exercise1/exercise1.py
-
-the cursor says where I'm typing
