@@ -13,6 +13,9 @@ class Game:
         choices = ['R', 'P', 'S']
         user_index = choices.index(self.current_user_choice)
         computer_index = choices.index(self.__current_computer_choice)
+        
+        print(f"User choice {self.current_user_choice}")
+        print(f"Computer Choice {self.__current_computer_choice}")
 
         if user_index == computer_index:
             return 'Tie'
