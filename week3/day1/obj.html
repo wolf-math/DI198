@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<h1>Objects!</h1>
+<body>
+  <script>
+    let myObj = {
+      name: 'Yaakov',
+      ownsDog: false,
+      age: 34,
+      nickname: 'Stolo',
+      fixMyGuitar: function () {
+        console.log('guitar fixed!');
+      },
+      coffee : {
+        flavor: 'peanuts'
+      }
+    };
+
+    myObj["name"] // Yaakov
+
+    console.log(myObj.name) // Yaakov
+    console.log(myObj.age) // 34
+
+    myObj.fixMyGuitar()
+
+    // let response = prompt("what key should I choose?")
+
+    // console.log(myObj[response])
+
+    console.log(myObj.coffee.flavor)
+
+    delete myObj.age
+
+    console.log(myObj)
+    
+    myObj.hair = 'fantastic'
+    
+    console.log(myObj)
+  </script>
+</body>
+</html>
