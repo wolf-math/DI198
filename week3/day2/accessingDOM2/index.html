@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GetElementById</title>
+</head>
+<body>
+    <div id="users">Users:</div>
+    <ul>
+      <li class="user" id="john">John</li>
+      <li class="user" id="pete">Pete</li>
+    </ul>
+
+    <script>
+      const users = document.getElementById('users')
+      console.log(users)
+
+      const pete = document.getElementById('pete')
+      console.log(pete.innerText)
+
+      // like an array
+      const userGroup = document.getElementsByClassName('user')
+      console.log(userGroup) // HTMLCollection (like an array)
+
+      const john = document.querySelector('#john')
+      console.log(john)
+
+      const userGroup2 = document.querySelectorAll('.user') // NodeList
+      console.log(userGroup2[1]) // Pete
+    </script>
+</body>
+</html>

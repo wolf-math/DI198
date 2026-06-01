@@ -1,5 +1,6 @@
 import requests
 import pprint
+import json
 
 api_key = "3815f88f365d48a5c17451a5b9843bcc" # deactivated!
 
@@ -23,17 +24,26 @@ geocode_info = make_request(get_geocode_url)
 
 # print(geocode_info)
 
-# print(f"Which {city_search}? (choose number)")
-# for i, res in enumerate(geocode_info):
-#     print(f"{i + 1}. {res['name']}, {res['state']}, {res['country']}")
+print(f"Which {city_search}? (choose number)")
+for i, res in enumerate(geocode_info):
+    print(f"{i + 1}. {res['name']}, {res['state']}, {res['country']}")
 
-# user_selection = int(input())
-# city_selection = geocode_info[user_selection - 1]
+user_selection = int(input())
+city_selection = geocode_info[user_selection - 1]
 
-# lat, lon = city_selection["lat"], city_selection["lon"]
+lat, lon = city_selection["lat"], city_selection["lon"]
 
-# current_weather_data = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric"
+current_weather_data = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric"
 
-# get_weather_info = make_request(current_weather_data)
+get_weather_info = make_request(current_weather_data)
 
-# pprint.pprint(get_weather_info)
+weather = json.loads(current_weather_data)
+
+temp = weather["main"]["temp"]
+humidity = weather["main"]["humidity"]
+description = weather["weather"][0]["description"]
+
+print("Current weather info:")
+pprint(f"Description: {description}")
+pprint(f"Temperature: {temp}")
+pprint(f"Humidity: {humidity}")

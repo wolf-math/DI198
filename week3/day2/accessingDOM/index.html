@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessing DOM</title>
+</head>
+<body>
+  <div>Users:</div>
+  <ul>
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+  
+  <script>
+    // const body = document.body
+    //     For each of the questions, find 2 WAYS of accessing :
+    //      1. The div DOM node?
+    const divDom1 = document.body.children[0]
+    const divDom2 = document.body.firstElementChild
+
+    console.log(divDom1)
+    console.log(divDom2)
+
+    //      2. The ul DOM node?
+    const ulDom1 = document.body.children[1]
+    const ulDom2 = divDom1.nextElementSibling
+
+    console.log(ulDom1)
+    console.log(ulDom2)
+
+    //      3. The second li (with Pete)?
+    const pete1 = document.body.children[1].firstElementChild.nextElementSibling // nope
+    const pete2 = ulDom1.lastElementChild
+
+    console.log(pete1)
+    console.log(pete2)
+
+
+  </script>
+</body>
+</html>
