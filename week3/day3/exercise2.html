@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Exercise 2</h1>
+  <p>
+    Add a few event listener to the button. The event listeners should change the style of the button
+  </p>
+
+  <button id="jsstyle">Style</button> 
+
+  <script>
+    // step 1: get the html element
+    let button = document.getElementById('jsstyle')
+
+    // step 2: add the event listener
+    button.addEventListener('click', clickButton)
+    button.addEventListener('mouseout', reset)
+
+    // step 3: create callback function(s) for events
+    function clickButton(){
+      button.style.backgroundColor = 'coral'
+      button.style.border = '3px dotted blue'
+      button.style.borderRadius = '50%'
+      button.style.color = 'chartreuse'
+    }
+
+    function reset(){
+      button.removeAttribute('style')
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- METHOD 1 -->
+  <!-- <form>
+    <input type="button" name="test" value="Click me" onclick="inform()">
+  </form>
+
+  <script>
+    function inform(){
+      alert("You clicked me")
+    }
+  </script> -->
+
+  <!-- METHOD 2 -->
+  <form>
+    <input type="button" name="test" value="Click me" id="button" >
+  </form>
+
+  <script>
+    const btn = document.getElementById('button')
+    
+    btn.onclick = function() {
+      alert('Click!');
+    };
+    
+  </script>
+</body>
+</html>
