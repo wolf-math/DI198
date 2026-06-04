@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+
+  <h1>Functions</h1>
+  
+  <script>
+    functionDeclaration() // Can hoist
+    
+    function functionDeclaration(){
+      console.log("Function declaration")
+    }
+    
+    const functionExpression = function() {
+      console.log("function expression")
+    }
+    
+    const arrowFunctionExpression = () => {
+      console.log('Arrow function')
+    }
+    
+    // function expressions do not hoist
+    functionExpression()
+    arrowFunctionExpression()
+
+
+    // myFunc is a function expression
+    let myObj = {
+      myFunc: function () {
+        console.log("this is from myObj")
+      }
+    }
+
+    myObj.myFunc()
+
+
+    // function declaration
+    function superFunc() {
+      console.log("this is from superFunc")
+    }
+
+    let myOtherObj = {
+      myFunc: superFunc
+    }
+
+    // function expression
+    myOtherObj.myFunc()
+
+
+    // var can hoist
+    console.log(user1) // undefined
+    var user1 = "vas"
+
+    // let and const don't hoist
+    console.log(user2) // ReferenceError
+    let user2 = 'ariel'
+
+  </script>
+</body>
+</html>

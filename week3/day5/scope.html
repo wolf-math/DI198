@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>scope</h1>
+
+  <script>
+    // // global scope
+    // let user = 'Vas'
+    // function coffeeTime(){
+    //   // local scope
+    //   user = 'Ariel'
+    //   console.log(`${user} likes to drink coffee in the morning.`)
+    // }
+
+    // coffeeTime()
+    
+    // console.log(user) // global scope
+
+
+    // {
+    //   var userName1 = 'Aaron'
+    //   let userName2 = 'Yaakov'
+    // }
+
+    // console.log(userName1) // Aaron
+    // console.log(userName2) // ReferenceError
+
+
+    function canIDrive(userAge){
+      let message
+      if (userAge <15 ){
+        message = 'NO WAY'
+      } else if (userAge >= 15 && userAge<=17 ) {
+        message = 'You can learn'
+      } else {
+        message = "You're old enough"
+      }
+
+      return message
+    }
+
+    // console.log(canIDrive(54)) // no way?
+
+
+    let x = 0
+    // let x = 1 // can't use let twice in the same scope
+
+
+    var y = 'chicken'
+    var y = 'chair'
+
+    
+
+  </script>
+</body>
+</html>

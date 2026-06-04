@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pass by value & Pass by reference</title>
+</head>
+<body>
+  <h1>Pass by value & Pass by reference</h1>
+
+  <script>
+    let person1 = 'Johnny'
+    let person2 = person1
+
+    person2 = 'Billy'
+
+    console.log(person1)
+    console.log(person2)
+
+    // =====================
+
+    let myArr = [1,2,3]
+    let newArr = myArr // saved the pointer in a new variable
+
+    newArr.push(4)
+
+    console.log(myArr)
+    console.log(newArr)
+
+
+  </script>
+</body>
+</html>

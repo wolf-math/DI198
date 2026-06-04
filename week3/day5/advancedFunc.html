@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Funk</title>
+</head>
+<body>
+
+  <h1>Advanced Funk</h1>
+  
+  <script>
+    // immediately invoked function expression
+    ( (num = 1) => {
+      for (let i = 0; i<num; i++){
+        console.log("You got the funk?")
+      }
+    })()
+
+    // IIFE:
+    // - Can be named
+    // - Can be annonumous
+    // - Can be arrow
+
+
+    // Nested function: function inside a function
+    function bigFunc (a, b) {
+      function littleFunc(b) {
+        return b * 3 - 10
+      }
+      return a * littleFunc(b)
+    }
+
+    // console.log(bigFunc(9, 10)) // 180
+
+
+    function outside(x) {
+      function inside(y) {
+        return x + y;
+      }
+      return inside;
+    }
+
+    let fnInside = outside(3);
+
+    console.log(fnInside) 
+    // function inside(y) {
+    //    return x + y;
+    //  }
+    console.dir(fnInside) 
+    // Closure (outside) x: 3
+
+    console.log(fnInside(5))
+
+    const newVal = outside(12)(8)
+    console.log(newVal)
+
+    const add3 = a => b => a + b;
+
+    // equivalent:
+
+    // function add4 (a) {
+    //   return function (b) {
+    //     return a + b
+    //   }
+    // }
+
+    add3(9)(3)
+
+
+
+  </script>
+</body>
+</html>

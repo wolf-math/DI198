@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <h1>objects</h1>
+  
+  <script>
+    // DON'T DO THIS!!!!!!!!!!!!!!!!!!!!!!
+
+    // let myCar = new Object();
+    // myCar.make = 'Ford';
+    // myCar.model = 'Mustang';
+    // myCar.year = 1969;
+
+    // DO THIS!!!!
+
+    let myCar = {
+      make: 'Ford',
+      model: 'Mustang',
+      year: 1969,
+    }
+
+    // access information
+    // -dot notation
+    myCar.model
+
+    // bracket notation
+    myCar["model"] // Mustang
+
+    let somevar = 'year'
+    // doesn't work
+    myCar.somevar // undefined
+    myCar[somevar] // 1969
+    // equivalent
+    myCar['year'] // 1969
+
+
+    let year = 2026
+
+    myCar.year // 1969
+  </script>
+</body>
+</html>
