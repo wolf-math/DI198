@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forEach</title>
+</head>
+<body>
+  <h1>forEach, some, every</h1>
+  <script>
+    let people = ['Aaron', 'Yaakov', 'Vas', 'Ariel']
+
+    function nameLength(name){
+      return name.length
+    }
+
+    // forEach
+
+    // people.forEach((user, i, arr) => {
+    //   let length = nameLength(user)
+    //   console.log(`User number ${i} is ${user}, and has ${length} letters`)
+    // })
+
+
+    // some
+    // let three = people.some((person, i) => {
+    //   console.log(i)
+    //   return nameLength(person) === 6 
+    // })
+    // console.log(three)
+
+    // every
+    let moreThan = people.every((person, i) => {
+      console.log(i, person)
+      return nameLength(person) > 3
+    })
+
+    console.log(moreThan)
+  </script>
+</body>
+</html>

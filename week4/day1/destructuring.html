@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuring</title>
+</head>
+<body>
+  <h1>Destructuring</h1>
+  
+  <script>
+    // let people = ['Aaron', 'Yaakov', 'Vas', 'Ariel', 'Joe']
+
+    // let [one, two, three] = people
+
+    // console.log(one)
+    // console.log(two)
+
+    // // rest operator
+
+    // let [first, second, ...rest] = people
+
+    // console.log(one) // Aaron
+    // console.log(second) // Yaakov
+    // console.log(rest) // ['Vas', 'Ariel', 'Joe']
+
+    // // spread operator
+
+    // let newPeople = ['Avner', 'Jeremy', 'Bibi', ...people]
+    // console.log(newPeople)
+
+
+    // let myArr = [1,2,3,4]
+    // // pass by reference
+    // let myOtherArr = myArr
+
+    // myOtherArr.push(5)
+
+    // console.log(myArr) // [1,2,3,4,5]
+
+    // // pass by value
+    // let myOtherOtherArr = [...myArr]
+    // myOtherOtherArr.push(6)
+    // console.log(myArr) // still [1,2,3,4,5]
+    // console.log(myOtherOtherArr) // [1,2,3,4,5,6]
+
+
+    let computerThings = ['Apple', 
+      'Dell', 
+      'Samsung', 
+        ['Nvidia', 'Intel', 'AMD', 'Micron'], 
+      'Toshiba'
+    ]
+
+    let compy = [...computerThings]
+
+    compy[1] = 'HP' // pass by value
+    compy[3][0] = 'ARM' // pass by reference --> This also changed computerThings
+
+    console.log(compy)
+    console.log(computerThings)
+    
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    const numbers = [10,11,12,15,20];
+
+    // 1. Using the for each method, display only the even numbers in the array
+
+    // numbers.forEach(num => {if (num % 2 === 0) {
+    //   console.log(num)
+    // }})
+
+    numbers.forEach(num => num % 2 === 0 ? console.log(num): null)
+
+    const words = ["wow","hey","bye"];
+
+    // 2. Check if at least one element of the array starts with the letter 'h'
+
+    let startsH = words.some((w)=> w.startsWith('h'))
+    console.log(startsH)
+    
+    const words2 = ["hello","hey","hola"];
+    
+    // 3. Check if all the elements of the array start with the letter 'h'
+    let startsH2 = words.every((w)=> w.startsWith('h'))
+    console.log(startsH)
+
+  </script>
+  
+</body>
+</html>
