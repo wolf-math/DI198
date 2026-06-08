@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Exercise 1</h1>
+  
+  <script>
+    // Use the methods above to :
+
+    // Count how many keys and values are in the object below
+    // Display : "The x# key is : --- The x# value is : ---".
+
+    let myObj = {
+      name : "John",
+      lastName : "Doe",
+      age : 25,
+      friends : ["Mark", "Lucie", "Ana"]
+    }
+
+    const keyLen = Object.keys(myObj).length
+    const valueLen = Object.values(myObj).length
+
+    console.log(keyLen, valueLen)
+
+    // Object.keys
+    // Object.keys(myObj).forEach((entry, i) => {
+    //   console.log(`The ${i} key is : ${entry} The ${i} value is : ${myObj[entry]}`)
+    // })
+
+    // Object.entries
+    Object.entries(myObj).forEach(([key, value], i) => {
+      console.log(`The ${i} key is : ${key} The ${i} value is : ${value}`)
+    })
+  </script>
+</body>
+</html>

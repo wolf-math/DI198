@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Cloning</h1>
+  
+  <script>
+    let myCar = {
+      color : 'blue',
+      details : {
+        plateNumber: 123,
+        name : "Ford"
+      }
+    }
+
+    // shallow copy
+    let arielCar = {...myCar}
+
+    // deep copy
+    let yaakovCar = structuredClone(myCar)
+
+    myCar.color = 'red'
+    myCar.details.plateNumber = '999'
+    myCar.details.name = 'Chevy'
+
+    // share the same details
+    console.log(myCar) // red
+    console.log(arielCar) // blue
+
+    // copletely different
+    console.log(yaakovCar)
+
+  </script>
+</body>
+</html>

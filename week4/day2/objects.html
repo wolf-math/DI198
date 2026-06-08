@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <h1>Objects</h1>
+
+  <script>
+    const mustang = {
+      name: 'mustang',
+      id: 1,
+      designation: 'P-51',
+      variant: 'D',
+      fullName: 'P-51D Mustang',
+      manufacturer: 'North American Aviation',
+      country: 'USA',
+      type: 'Fighter',
+      role: 'Escort Fighter',
+      firstFlight: 1940,
+      crew: 1,
+      engineCount: 1,
+      engine: 'Packard V-1650-7 Merlin',
+      horsepower: 1695,
+      topSpeed: 437,
+      range: 1650,
+      wingspan: 37,
+      serviceCeiling: 41900
+    }
+
+    const keys = Object.keys(mustang)
+    console.log(keys)
+
+    const values = Object.values(mustang)
+    console.log(values)
+
+    const entries = Object.entries(mustang)
+    console.log(entries)
+
+    const mustangArr = [
+      ['manufacturer', 'North American Aviation'],
+      ['country', 'USA'],
+      ['type', 'Fighter'],
+      ['role', 'Escort Fighter'],
+    ]
+
+    const mustangObj = Object.fromEntries(mustangArr)
+    console.log(mustangObj)
+
+    // forEach over an obj
+    Object.keys(mustang).forEach(key => {
+      console.log(`${key} - ${mustang[key]}`)
+    })
+
+    // Can't use forEach directly on an obj
+    // mustang.forEach(thing => console.log(thing))
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    const number = 18 
+
+    const address = {
+      street: 'Evergreen Terrace',
+      number: '742',
+      city: 'Kalamazoo',
+      state: 'MI',
+      zip: '49007',
+    };
+
+    // get the street and number (old)
+    // const street = address.street
+    // const number = address.number
+
+    // get the street and number destructuring!
+    // const { street, number } = address
+    // console.log(street, number)
+
+    // rename 'number' from address to streetNumber
+    const { street, number: streetNumber } = address
+
+    console.log(streetNumber, number) // 742 18
+
+
+
+  </script>
+  
+</body>
+</html>
