@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+<body>
+
+  <h1>JSON</h1>
+  
+  <script>
+    const address = {
+      street: 'Evergreen Terrace',
+      number: '742',
+      city: 'Kalamazoo',
+      state: 'MI',
+      zip: '49007',
+    };
+
+    // converts object to JSON string
+    const addressJSON = JSON.stringify(address, null, 2)
+
+    console.log(address)
+    console.log(addressJSON)
+
+    console.log(typeof address) // object
+    console.log(typeof addressJSON) // string
+
+    // this is a string, not an obj!
+    // const jane = '{"firstName": "Jane", "lastName": "Doe", "hobbies": ["running", "sky diving", "singing"], "age": 35, "children": [ { "firstName": "Alice", "age": 6 }, { "firstName": "Bob", "age": 8 } ]}'
+
+    // console.log(typeof jane) // string
+    // console.log(jane.lastName) // undefined
+    
+    // // convert JSON string to JS object
+    // const janeObj = JSON.parse(jane)
+    // console.log(janeObj.lastName) // Doe
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+#board {
+  border-collapse: collapse;
+}
+
+#board td {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 48px;
+  font-family: Arial, sans-serif;
+  border: 4px solid black;
+}
+
+/* Remove outside border */
+#board tr:first-child td {
+  border-top: none;
+}
+
+#board tr:last-child td {
+  border-bottom: none;
+}
+
+#board td:first-child {
+  border-left: none;
+}
+
+#board td:last-child {
+  border-right: none;
+}
