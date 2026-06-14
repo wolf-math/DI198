@@ -33,7 +33,7 @@ def check_winner():
         (x0, y0), (x1, y1), (x2, y2) = combo
 
         if board[x0][y0] != " " and board[x0][y0] == board[x1][y1] == board[x2][y2]:
-            return True
+            return True 
 
     return False
 
