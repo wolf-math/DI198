@@ -1,0 +1,102 @@
+body {
+  background-color: black;
+}
+
+h1, h2 {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.08em;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: white
+}
+
+#icon {
+  color: white;
+  font-size: 10rem;
+}
+
+#logo {
+  height: 300px
+}
+
+#container {
+  width: 600px;
+  height: 300px; 
+  padding: 20px;
+  margin: 20px auto;
+  border: 3px solid goldenrod;
+  border-radius: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#btn {
+  width: 250px;
+  height: 50px;
+  background-color: black;
+  color: goldenrod;
+  font-size: 1rem;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 5px;
+  border: 3px solid goldenrod;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background: radial-gradient(circle at bottom, #10152d, #02030a 70%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: white;
+  pointer-events: none;
+
+  box-shadow:
+    4vw 8vh white,
+    13vw 22vh #aacfff,
+    21vw 5vh white,
+    29vw 47vh white,
+    35vw 16vh #d6e7ff,
+    43vw 71vh white,
+    51vw 31vh white,
+    58vw 89vh #aacfff,
+    64vw 12vh white,
+    72vw 54vh white,
+    79vw 27vh #d6e7ff,
+    86vw 76vh white,
+    94vw 39vh white,
+    7vw 63vh white,
+    17vw 84vh #aacfff,
+    26vw 68vh white,
+    39vw 94vh white,
+    47vw 7vh white,
+    56vw 59vh #d6e7ff,
+    68vw 36vh white,
+    76vw 96vh white,
+    89vw 14vh #aacfff,
+    97vw 67vh white;
+}
+

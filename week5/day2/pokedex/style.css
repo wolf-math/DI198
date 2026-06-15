@@ -1,0 +1,29 @@
+#head {
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#pokeImg {
+  height: 230px
+}
