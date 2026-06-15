@@ -27,3 +27,13 @@
 #pokeImg {
   height: 230px
 }
+
+.button {
+  font-family: "Henny Penny", system-ui;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "Henny Penny", system-ui;
+  line-height: 1rem;
+}

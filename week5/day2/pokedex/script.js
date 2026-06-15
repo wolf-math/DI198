@@ -7,7 +7,7 @@ const getInfo = async (search = 1) => {
       pokeId += 1;
       break;
     default:
-      pokeId = Math.floor(Math.random() * 1025);
+      pokeId = Math.floor(Math.random() * 1025) + 1;
   }
 
   const url = `https://pokeapi.co/api/v2/pokemon/${pokeId}`;
@@ -54,11 +54,7 @@ const displayInfo = (search) => async () => {
   pokeImg.id = 'pokeImg';
   pokeImg.src = img;
 
-  main.appendChild(pokeImg);
-  main.appendChild(pokeNum);
-  main.appendChild(pokeName);
-  main.appendChild(pokeHeight);
-  main.appendChild(pokeWeight);
+  main.append(pokeImg, pokeNum, pokeName, pokeHeight, pokeWeight);
 };
 
 let pokeId = 0;
