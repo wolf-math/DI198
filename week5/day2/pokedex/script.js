@@ -40,8 +40,6 @@ const displayInfo = (search) => async () => {
 
   const { id, name, height, weight, img } = result;
 
-  console.log(height, weight);
-
   const pokeNum = document.createElement('h3');
   pokeNum.innerHTML = `Pokemon # ${id}`;
   const pokeName = document.createElement('h3');
