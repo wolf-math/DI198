@@ -1,0 +1,17 @@
+function getRandomNumberElement(items: number[]): number {
+  let randomIndex = Math.floor(Math.random() * items.length);
+  return items[randomIndex];
+}
+
+// duplicate function for other types
+// (not good)
+function getRandomStringElement(items: string[]): string {
+  let randomIndex = Math.floor(Math.random() * items.length);
+  return items[randomIndex];
+}
+
+let numbers = [1, 5, 7, 4, 2, 9];
+console.log(getRandomNumberElement(numbers));
+
+let colors = ['red', 'green', 'blue'];
+console.log(getRandomStringElement(colors));
